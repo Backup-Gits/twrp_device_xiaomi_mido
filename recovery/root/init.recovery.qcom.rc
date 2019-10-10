@@ -36,6 +36,7 @@ on fs
     chown system system /dev/ion
 
 on property:ro.crypto.state=encrypted
+    setprop ro.hardware.keystore msm8953
     start sbinqseecomd
 
 # Separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
