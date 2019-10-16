@@ -8,5 +8,5 @@ lunch herobuxx_mido-eng
 
 Start the compilation
 ```
-make recoverimahe -j 16
+make recoveryimage -j 16
 ```
