@@ -34,6 +34,7 @@ on fs
     chmod 0777 /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
+    instal_keyring
 
 on property:ro.crypto.state=encrypted
     setprop ro.hardware.keystore msm8953
@@ -46,3 +47,8 @@ service sbinqseecomd /sbin/qseecomd
     user root
     group root
     seclabel u:r:recovery:s0
+
+service keystore /sbin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc
+    disabled
