@@ -52,3 +52,4 @@ service keystore /sbin/keystore /tmp/misc/keystore
     user root
     group root drmrpc readproc
     disabled
+    seclabel u:r:recovery:s0
